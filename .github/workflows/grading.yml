@@ -7,6 +7,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      test_group:
+        description: "Test group to run"
+        required: true
+        default: "test-add"  # Default to running addition tests
 
 jobs:
   build:
@@ -14,23 +20,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'temurin'
+
       - name: Install Maven
         run: sudo apt-get update && sudo apt-get install -y maven
+
       - name: Build with Maven
         run: mvn clean install
-      - name: Run tests
-        run: mvn test
-        
-      - name: Run Addition Test
-        run: mvn test -Dgroups=test-add
 
-      - name: Run Subtraction Test
-        run: mvn test -Dgroups=test-subtract
-
-      - name: Run Multiplication Test
-        run: mvn test -Dgroups=test-multiply
+      - name: Run Selected Test Group
+        run: mvn test -Dgroups=${{ github.event.inputs.test_group }}
