@@ -23,7 +23,7 @@ public class AppTest {
     @Test
     public void testSubtract() {
         App app = new App();
-        assertEquals(2, app.sub(3, 2));
+        assertEquals(1, app.sub(3, 2));
         assertEquals(263, app.sub(288, 25));
         assertEquals(331, app.sub(678, 347));
     }
