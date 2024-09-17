@@ -12,7 +12,9 @@ on:
       test_group:
         description: "Test group to run"
         required: true
-        default: "test-add"  # Default to running addition tests
+        default: "com.example.TestGroups$Add" 
+
+
 
 jobs:
   build:

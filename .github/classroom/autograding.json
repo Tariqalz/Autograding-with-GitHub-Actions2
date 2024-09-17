@@ -1,35 +1,34 @@
 {
-    "tests": [
-      {
-        "name": "Addition test",
-        "setup": "",
-        "run": "mvn test -Dgroups=test-add",
-        "input": "",
-        "output": "",
-        "comparison": "included",
-        "timeout": 2,
-        "points": 1
-      },
-      {
-        "name": "Subtraction test",
-        "setup": "",
-        "run": "mvn test -Dgroups=test-subtract",
-        "input": "",
-        "output": "",
-        "comparison": "included",
-        "timeout": 2,
-        "points": 1
-      },
-      {
-        "name": "Multiply test",
-        "setup": "",
-        "run": "mvn test -Dgroups=test-multiply",
-        "input": "",
-        "output": "",
-        "comparison": "included",
-        "timeout": 2,
-        "points": 1
-      }
-    ]
-  }
-  
+  "tests": [
+    {
+      "name": "Addition test",
+      "setup": "",
+      "run": "mvn test -Dgroups=com.example.TestGroups$Add",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Subtraction test",
+      "setup": "",
+      "run": "mvn test -Dgroups=com.example.TestGroups$Subtract",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Multiply test",
+      "setup": "",
+      "run": "mvn test -Dgroups=com.example.TestGroups$Multiply",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    }
+  ]
+}
