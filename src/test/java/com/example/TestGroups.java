@@ -1,7 +1,7 @@
 package com.example;
 
-public interface TestGroups {
-    interface Add {}
-    interface Subtract {}
-    interface Multiply {}
+public class TestGroups {
+    public interface Add {}
+    public interface Subtract {}
+    public interface Multiply {}
 }
